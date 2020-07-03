@@ -1,3 +1,4 @@
+
 //01. COUNTER
 
  let count = 0;
@@ -11,7 +12,7 @@ function subNumber(){
   document.getElementById('newNumber').innerHTML = count;
 }
 
-//02. SLIDER
+//02. IMAGE SLIDER
 
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -29,21 +30,73 @@ function currentSlide(n) {
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
   }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
   slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+  
 }
 
 
-//MODAL
+//03. MODAL
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+//04. Tetimonials
+
+var testimonialIndex = 1;
+showTestimonials(testimonialIndex);
+
+// Next/previous controls
+function plusTestimonial(n) {
+  showTestimonials(testimonialIndex += n);
+}
+
+// Thumbnail image controls
+function currentTestimonial(n) {
+  showTestimonials(testimonialIndex = n);
+}
+
+function showTestimonials(n) {
+  var i;
+  var testimonials = document.getElementsByClassName("testimonials");
+  
+  if (n > testimonials.length) {testimonialIndex = 1}
+  if (n < 1) {testimonialIndex = testimonials.length}
+  for (i = 0; i < testimonials.length; i++) {
+      testimonials[i].style.display = "none";
+  }
+  
+  testimonials[testimonialIndex-1].style.display = "block";
+  
+}
+
 
 
 //05. Digital Clock
@@ -113,13 +166,15 @@ function changeFormat() {
 
 //07. Word Counter
 
-function wordConter () {
+function wordCounter () {
+
  var text = document.getElementById("input").value;
  var words = text.split(' ');
  document.getElementById('count').innerHTML = words.length;
+
  }
 
-//06. Calculator
+ //06. Calculator
 
  class Calculator {
   
@@ -193,7 +248,7 @@ function wordConter () {
       integerDisplay = integerDigits.toLocaleString('en', { maximumFractionDigits: 0 })
     }
     if (decimalDigits != null) {
-      return `${integerDisplay}.${decimalDigits}`
+      return `${integerDisplay}.${decimalDigits}` 
     } else {
       return integerDisplay
     }
@@ -211,7 +266,7 @@ function wordConter () {
   }
 }
 
-const numberButtons = document.querySelectorAll('[data-number]')
+ const numberButtons = document.querySelectorAll('[data-number]')
  const operationButtons = document.querySelectorAll('[data-operation]')
  const equalsButton = document.querySelector('[data-equals]')
  const deleteButton = document.querySelector('[data-delete]')
@@ -220,6 +275,7 @@ const numberButtons = document.querySelectorAll('[data-number]')
  const currentOperandTextElement = document.querySelector('[data-current-operand]')
 
  const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
+
 
  operationButtons.forEach(button => {
   button.addEventListener('click', () => {   
