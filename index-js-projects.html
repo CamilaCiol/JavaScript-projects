@@ -62,44 +62,106 @@
         </div>
 
 
-        <div>
+        <div class="squares">
             <h1>03. Modal Project</h1>
-                <div class="btn-modal">
-                    <button class="close-btn">X</button>
-                 </div>
-                <div class="modal-square">
-                    <img class="modal-img img-container"src="images/img3.jpg">
-                </div>
-              
+            <div class="box"> 
+                <h2 class="modal-title">Animated Modal with Header and Footer</h2>
+                    <!-- Trigger/Open The Modal -->
+                    <button class="btn-modal" id="myBtn">Open Modal</button>
+
+                    <!-- The Modal -->
+                    <div id="myModal" class="modal">
+
+                          <!-- Modal content -->
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <span class="close">&times;</span>
+                              <h2>Modal Header</h2>
+                            </div>
+                            <div class="modal-body">
+                              <h3>Lorem ipsum dolor sit amet.</p>
+                              <p>consectetur adipiscing elit, sed do eiusmod 
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                        exercitation ullamco laboris nisi ut</p>
+                            </div>
+                            <div class="modal-footer">
+                              <h3>Modal Footer</h3>
+                            </div>
+                          </div>
+
+                    </div>
+            </div>        
         </div>
 
-        <div>
+        
+              
+       
+
+        <div class="squares">
             <h1>04. Testimonials</h1>
             <div class="client-box box">
-                <img class="centered-and-cropped "src="images/profilepic.jpg">
-                    <div class="client-name">
-                        <a class="prev-client" >&#10094;</a>
-                        <h2>John O'Brien</h2>
-                        <a class="next-client" >&#10095;</a>
-                     </div>
-                <div>
-                    <i class="fas fa fa-star"></i>
-                    <i class="fas fa fa-star"></i>
-                    <i class="fas fa fa-star"></i>
-                    <i class="fas fa fa-star"></i>
+                <div class="testimonials">
+                    <img class="centered-and-cropped "src="images/profilepic.jpg">
+                        <div class="client-name">
+                            <a class="prev-client" onclick="plusTestimonial(-1)" >&#10094;</a>
+                            <h2>John O'Brien</h2>
+                            <a class="next-client" onclick="plusTestimonial(1)">&#10095;</a>
+                         </div>
+                    <div>
+                        <i class="fas fa fa-star"></i>
+                        <i class="fas fa fa-star"></i>
+                        <i class="fas fa fa-star"></i>
+                        <i class="fas fa fa-star"></i>
+                    </div>
+                    <p class="p-testimonials">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse 
+                        molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan.
+                    </p>
                 </div>
-                <p class="p-testimonials">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                    exercitation ullamco laboris nisi ut.
-                </p>
+                <!-- 2nd tesminonial -->
+                <div class="testimonials">
+                     <img class="centered-and-cropped "src="images/profilepic.jpg">
+                        <div class="client-name">
+                            <a class="prev-client" onclick="plusTestimonial(-1)">&#10094;</a>
+                            <h2>Katie Walsh</h2>
+                            <a class="next-client" onclick="plusTestimonial(1)">&#10095;</a>
+                         </div>
+                    <div>
+                        <i class="fas fa fa-star"></i>
+                        <i class="fas fa fa-star"></i>
+                        <i class="fas fa fa-star"></i>
+                        <i class="fas fa fa-star"></i>
+                        <i class="fas fa fa-star"></i>
+                    </div>
+                    <p class="p-testimonials">Nam liber tempor cum soluta nobis eleifend option congue nihil 
+                        imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; 
+                    </p>
+                </div>
+                <!-- 3nd tesminonial -->
+                <div class="testimonials">
+                     <img class="centered-and-cropped "src="images/profilepic.jpg">
+                        <div class="client-name">
+                            <a class="prev-client" onclick="plusTestimonial(-1)">&#10094;</a>
+                            <h2>Carol Smith</h2>
+                            <a class="next-client" onclick="plusTestimonial(1)">&#10095;</a>
+                        </div>
+                    <div>
+                        <i class="fas fa fa-star"></i>
+                        <i class="fas fa fa-star"></i>
+                        <i class="fas fa fa-star"></i>
+                        
+                    </div>
+                    <p class="p-testimonials">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+                        exercitation ullamco laboris nisi ut.
+                    </p>
+
+                </div>
                 
-                
+
             </div>
-          
-        </div>
+        </div>    
 
-
-        <div>
+        <div class="squares">
             <h1>05. Digital Clock</h1>
             <div class="box">
                 <div id="clock"></div>
@@ -125,9 +187,9 @@
         <div>
             <h1>07. Word Counter</h1>
             <div class="box clock-box">
-                <span id="count">0</span>
+                <span class="center" id="count">0</span>
                 <textarea id="input" rows="10"></textarea>
-                <button class="btn-quote" onclick="wordConter()">Count</button>   
+                <button class="btn-quote" onclick="wordCounter()">Count</button>   
 
             </div>
         </div>
@@ -139,14 +201,14 @@
 
                 <div class="calculator-grid">
                     <div class="output">
-                        <div class="previous-operand">123</div>
-                        <div class="current-operand">123</div>
+                        <div data-previous-operand class="previous-operand"></div>
+                        <div data-current-operand class="current-operand"></div>
                     </div>    
 
                     
-                        <button class="span-2">AC</button>
-                        <button >DEL</button>
-                        <button data-operation>&divide;</button>
+                        <button data-all-clear class="span-2">AC</button>
+                        <button data-delete>DEL</button>
+                        <button data-operation>÷</button>
                         <button data-number>1</button>
                         <button data-number>2</button>
                         <button data-number>3</button>
@@ -162,6 +224,7 @@
                         <button data-number>.</button>
                         <button data-number>0</button>
                         <button data-equals class="span-2">=</button>
+
                         
                     </div>
 
@@ -170,6 +233,7 @@
         </div>
         
     </section>
+
 
     <script src="js-projects.js"></script>
 </body>
