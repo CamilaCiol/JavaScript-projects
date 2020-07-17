@@ -156,7 +156,6 @@ function changeFormat() {
     ["Trust yourself. You know more than you think you do. - Benjamin Spock"],
     ["No one can make you feel inferior without your consent. - Eleanor Roosevelt, This is My Story"],
     ["To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment. - Ralph Waldo Emerson"],
-    ["Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do. So throw off the bowlines. Sail away from the safe harbor. Catch the trade winds in your sails. Explore. Dream. Discover. - H. Jackson Brown Jr. - P.S. I Love You"]
     ];
     var randomNumber = Math.floor(Math.random() * (quotes.length));
     document.getElementById('quoteDisplay').innerHTML = quotes[randomNumber];
