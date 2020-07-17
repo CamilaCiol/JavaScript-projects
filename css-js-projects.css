@@ -7,6 +7,57 @@
 }
 
 body{
+    min-height: 100%;
+    width: 100%;
+    background-color:white;
+    display: grid;
+}
+
+h1, h2, h3{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #363957;
+    margin: 20px;
+    text-align: center;
+}
+
+h1{
+    font-size: 40px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+h2{
+    font-size: 30px;
+    margin-top: 40px;
+    margin-bottom: 13px;
+}
+h3{
+    font-size: 20px;
+}
+
+p{
+	font-size: 20px;
+  font-family: Helvetica;
+  line-height: 1.4;
+}
+
+img {
+  width: 100%;
+}
+
+.img-container {
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 2px 2px 10px 2px #888888;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body{
     background-color:white;
 }
 
@@ -36,67 +87,39 @@ p{
   line-height: 1.4;
 }
 
-img {
-  width: 100%;
-}
-
 .img-container {
     border-radius: 10px;
     width: 100%;
     box-shadow: 2px 2px 10px 2px #888888;
-
 }
-
-nav{
-    width: 100%;
-    background: linear-gradient(90deg, #6D2DA6, #9C69CC);
-    border-bottom: 15px solid #EDBA60;
-}
-
-
 
 /* TOP BAR */
 
+.menu{
+    width: 100%;
+    background: linear-gradient(90deg, #6D2DA6, #9C69CC);
+    border-bottom: 15px solid #EDBA60;
+    display: grid;
+    grid-column: 1 / -1;
+}
+
 .top-bar {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    width:80%;
-    margin: auto;
-    height: 100px;
-    align-items: center;
-    justify-content: flex-start;
-    
-    
-
-
-   /* display: grid;
-    width: 100%;
+    width: 85%;
     margin: auto;
     align-items: center;
-    grid-template-columns: auto auto auto auto;
-    */
+    grid-template-columns: 200px 100px auto;
+    height: 150px;
+    grid-column: 1 / -1;
 }
 
 .logo{
-
-    width: auto;
     display: grid;
-    height: 60px;
-    box-shadow: none;
+    height: 80px;
 }
 
-/* boxes */
 
-section{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(470px, 1fr));
-    width:80%;
-    margin: auto;
-    grid-gap: 70px;
-    
-}
-
-/*Counter*/
+/* 01.Counter */
 
 .box{
     display: grid;
@@ -105,16 +128,17 @@ section{
     border: solid 2px #6D2DA6;
     border-radius: 10px;
     width: 100%;
-    height: 69%;
     margin: auto;
     box-shadow: 1px 1px 10px 1px #888888;
+}
+
+.box-counter{
+	height: 76%;
 }
 
 .center{
   text-align: center;
 }
-
-
 
 .btn-counter{
     height: 70px;
@@ -129,20 +153,25 @@ section{
     margin: 30px;
 }
 
+.btn-counter:hover{
+  border: 1px solid rgba(109,45,166,0.5);
+  background-color: rgba(109,45,166,0.5);
+  cursor: pointer;
+}
+
 .newNumber{
+	font-family: helvetica;
     font-size: 90px;
 }
 
 
-/*SLIDER*/
+/* 02. SLIDER */
 
 .slideshow-container {
   max-width: 1000px;
   position: relative;
   margin: auto;
 }
-
-
 
 /* Hide the images by default */
 .mySlides {
@@ -230,7 +259,6 @@ section{
   to {opacity: 1}
 }
 
-
 /* 03. MODAL PROJECT */
 
 /* The Modal (background) */
@@ -246,6 +274,10 @@ section{
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.box-modal{
+	height: 71%;
 }
 
 /* Modal Content */
@@ -279,8 +311,7 @@ section{
   to {top:0; opacity:1}
 }
 
-.btn-modal{
-
+.btn {
   border-radius: 15px;
   width: 180px;
   height: 50px;
@@ -292,12 +323,13 @@ section{
   text-align: center;
   font-size: 20px;
   cursor: pointer;
-  align-self: center;
   align-content: center;
   justify-self: center;
-  
+  margin-top:20px;
+  margin-bottom: 20px;
   }
-.btn-modal:hover{
+
+.btn:hover{
   border: 1px solid rgba(109,45,166,0.5);
   background-color: rgba(109,45,166,0.5);
   cursor: pointer;
@@ -334,8 +366,6 @@ section{
   margin: 50px;
 }
 
-
-
 .modal-footer {
   border-radius: 0px 0px 15px 15px;
   padding: 2px 16px;
@@ -347,45 +377,6 @@ section{
   color: white;
 }
 
-/*.btn-modal{
-  
-  display: grid;
-  align-items: right;
-  justify-items: right;
-  width: 100%;
-}
-
-.close-btn{
-  width:20px;
-  border-radius: 3px 3px 0px 00px;
-  border: 1px solid rgba(109,45,166,0.5);
-  background-color: rgba(109,45,166,0.5);
-  cursor: pointer;
-  position: relative;
-  
-}
-
-.close-btn:hover{
-  border: 1px solid purple;
-  background-color: #6D2DA6;
-  width: 20px;
-  
-  
-}
-
-.modal-square{
-  display: grid;
-  align-items: center;
-  justify-items: center;
-  
-}
-
-.modal-img{
-  border-radius: 10px 0px 10px 10px;
-}
-*/
-
-
 
 /* 04. Testimonials */
 
@@ -396,7 +387,6 @@ section{
 }
 
 .centered-and-cropped{
-  
   object-fit: cover;
   width: 100px; 
   height: 100px;
@@ -436,7 +426,7 @@ justify-items: center;
   user-select: none;
 }
 
-/* Position the "next button" to the right */
+
 .prev-client{
   left: 0;
   border-radius: 0 3px 3px 0;
@@ -446,7 +436,6 @@ justify-items: center;
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
 .prev-client:hover, .next-client:hover {
   background-color: rgba(0,0,0,0.5);
   color: white;
@@ -490,31 +479,11 @@ justify-items: center;
     .box-centre{
        align-self: center;
     justify-self: center;
-
     }
 
 .btn-quote{
-  width: 180px;
-  height: 50px;
-  display: grid;
-  border-radius: 10px;
-  border: none;
-  background-color: #6D2DA6; /*purple*/
-  color: white;
-  text-align: center;
-  font-size: 20px;
-  cursor: pointer;
-  align-self: center;
-  justify-self: center;
-  align-content: center;
-  
-  }
-.btn-quote:hover{
-  border: 1px solid rgba(109,45,166,0.5);
-  background-color: rgba(109,45,166,0.5);
-  cursor: pointer;
+	align-self: center;;
 }
-
 #quoteDisplay {
   align-self: end;
   justify-self: center;
@@ -528,7 +497,6 @@ footer{
   height: 100px;
 }
 
-
 /*07. Word Counter */
 
 #input {
@@ -537,15 +505,18 @@ footer{
 }
 
 #count {
+	font-family: helvetica;
   font-size: 90px;
 }
 
+.box-word-counter{
+	height: 69%;
+}
 
 /*08. Calculator */
 
 @import url('https://fonts.googleapis.com/css?family=Space+Mono');
 
-/* quick reset so all our padding is the right size */
 * {
   box-sizing: border-box;
 }
@@ -559,13 +530,11 @@ footer{
   font-family: helvetica;
 }
 
-
 .calculator-grid > button {
   cursor:pointer;
   font-size: 1.5rem;
   border: 1px solid black;
   outline: none;
-
 }
 
 .calculator-grid > button:hover{
@@ -589,7 +558,6 @@ footer{
    word-break: break-all;
 }
 
-
 .output .previous-operand  {
   color: rgba(255, 255, 255, 0.75);
   font-size: 1.5rem;
@@ -600,5 +568,49 @@ footer{
   font-size: 2.5rem;
 }
 
+/* boxes */
 
+section{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(470px, 1fr));
+    width:80%;
+    margin: auto;
+    grid-gap: 70px; 
+}
 
+section > div {
+  margin-right: 5px;
+}
+
+@media screen and (max-width: 640px) {
+
+  section {
+    margin: 0;
+  }
+
+  .squares {
+    grid-template-columns: 350px;
+    grid-gap: 2px;
+    margin: 0;
+    width: 100%;
+    margin-right: 5px;
+    
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .section {
+    margin: none;
+  }
+  .btn-modal{
+  	margin-bottom: 30px;
+  	margin-top: 10px;
+  }
+  #quoteDisplay{
+  	margin-top:20px;
+  }
+  .btn-quote{
+  	margin-bottom:20px;
+  }
+
+}
